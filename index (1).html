@@ -1,0 +1,746 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Learn Forge | Build Beyond Limits</title>
+
+  <meta name="description" content="A student-led technology community for Microsoft Learn, DSA, internships, open source and hackathons.">
+
+  <meta name="theme-color" content="#080808">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <meta name="color-scheme" content="dark light">
+
+  <script>
+    /* Apply the saved theme before first paint (no flash). */
+    (function () {
+      var theme = "dark";
+      try {
+        var saved = localStorage.getItem("lf-theme");
+        if (saved === "light" || saved === "dark") theme = saved;
+      } catch (e) {}
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="sty.css">
+
+  <script src="confi.js" defer></script>
+  <script src="APP.js" defer></script>
+</head>
+
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- NAVIGATION -->
+
+<header class="header">
+  <div class="container nav-wrapper">
+
+    <a href="#home" class="brand">
+      <span class="brand-icon">&lt;/&gt;</span>
+      <span>LEARN<span class="gold">FORGE</span></span>
+    </a>
+
+    <div class="nav-right">
+
+      <nav id="nav">
+        <a href="#program">Program</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#community">Community</a>
+        <a href="#register" class="nav-cta">Join Now ↗</a>
+      </nav>
+
+      <button class="theme-toggle" id="themeBtn" type="button"
+        aria-label="Switch to light mode"
+        title="Switch to light mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round"
+          aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round"
+          aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+
+      <button class="menu-toggle" id="menuBtn"
+        aria-label="Toggle navigation"
+        aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </div>
+</header>
+
+
+<main id="main">
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+  <div class="hero-glow"></div>
+
+  <div class="container hero-grid">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        <span class="live-dot"></span>
+        FIRST BATCH · LIMITED TO <span data-bind="capacity">40</span> STUDENTS
+      </div>
+
+      <h1>
+        Build Skills.<br>
+        Create <span class="gold">Impact.</span><br>
+        Shape Your Future.
+      </h1>
+
+      <p class="hero-description">
+        More than a student group. A technology community
+        built around learning, coding, certifications,
+        internships, open source and innovation.
+      </p>
+
+      <div class="hero-tags">
+        <span>Microsoft Learn</span>
+        <span>DSA</span>
+        <span>GSoC</span>
+        <span>Internships</span>
+        <span>Hackathons</span>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#register" class="btn btn-primary">
+          Become a Member <span>↗</span>
+        </a>
+
+        <a href="#program" class="btn btn-outline">
+          Explore Program ↓
+        </a>
+      </div>
+
+      <p class="hero-caption">
+        Learn together. Build together. Grow together.
+      </p>
+
+    </div>
+
+
+    <!-- LIVE SEAT CARD -->
+
+    <aside class="seat-card">
+
+      <div class="seat-top">
+        <div>
+          <span class="small-label">COMMUNITY INTAKE</span>
+          <h2>First Batch</h2>
+        </div>
+
+        <span class="status" data-bind="status">Checking</span>
+      </div>
+
+      <div class="seat-number">
+        <strong data-bind="remaining">–</strong>
+        <span>seats remaining</span>
+      </div>
+
+      <div class="progress-track">
+        <div class="progress-fill" id="seatProgress"></div>
+      </div>
+
+      <div class="seat-info">
+        <span><b data-bind="count">–</b> Registered</span>
+        <span>Capacity: <b data-bind="capacity">40</b></span>
+      </div>
+
+      <div class="seat-grid" data-grid aria-label="Seat availability"></div>
+
+      <p class="seat-note" data-bind="note">
+        Checking availability...
+      </p>
+
+      <a href="#register" class="btn btn-primary full-width">
+        Secure Your Place ↗
+      </a>
+
+    </aside>
+
+  </div>
+</section>
+
+
+<!-- TRUST STRIP -->
+
+<section class="trust-strip">
+  <div class="container trust-items">
+    <span>LEARN</span>
+    <i></i>
+    <span>BUILD</span>
+    <i></i>
+    <span>COLLABORATE</span>
+    <i></i>
+    <span>INNOVATE</span>
+  </div>
+</section>
+
+
+<!-- MICROSOFT LEARN -->
+
+<section class="section" id="program">
+
+  <div class="container program-grid">
+
+    <div>
+      <span class="section-tag">01 / LEARNING</span>
+
+      <h2>
+        Your learning journey
+        <span class="gold">starts here.</span>
+      </h2>
+
+      <p class="section-description">
+        Explore Microsoft technologies through structured
+        learning paths, hands-on modules and collaborative
+        learning sessions.
+      </p>
+
+      <div class="feature-list">
+
+        <div class="feature-row">
+          <span class="feature-icon">01</span>
+          <div>
+            <h3>Microsoft Learn Paths</h3>
+            <p>Explore Azure, cloud computing, AI and modern technologies.</p>
+          </div>
+        </div>
+
+        <div class="feature-row">
+          <span class="feature-icon">02</span>
+          <div>
+            <h3>Practical Learning</h3>
+            <p>Complete guided modules and hands-on technical exercises.</p>
+          </div>
+        </div>
+
+        <div class="feature-row">
+          <span class="feature-icon">03</span>
+          <div>
+            <h3>Achievements & Certifications</h3>
+            <p>Earn eligible Microsoft Learn achievements and prepare for certification exams.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="https://learn.microsoft.com/en-us/training/"
+         target="_blank" rel="noopener noreferrer"
+         class="text-link">
+        Explore Microsoft Learn ↗
+      </a>
+    </div>
+
+
+    <div class="learning-card">
+
+      <div class="learning-card-top">
+        <span>LEARNING EXPERIENCE</span>
+        <span class="gold">01—04</span>
+      </div>
+
+      <div class="learning-visual">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="learning-symbol">&lt;/&gt;</div>
+      </div>
+
+      <h3>From curiosity to capability.</h3>
+
+      <p>
+        Build a foundation, practise consistently,
+        develop projects and grow your technical profile.
+      </p>
+
+      <div class="learning-footer">
+        <span>SELF-PACED LEARNING</span>
+        <span>PEER SUPPORT</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container disclaimer">
+    <strong>Important:</strong>
+    Microsoft Learn achievements are different from formal
+    Microsoft certification credentials. Certification exams
+    may have separate fees and requirements. The community
+    provides learning and preparation support, not guaranteed
+    certifications or employment.
+  </div>
+
+</section>
+
+
+<!-- BENEFITS -->
+
+<section class="section dark-section" id="benefits">
+
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="section-tag">02 / OPPORTUNITIES</span>
+      <h2>Everything you need to <span class="gold">level up.</span></h2>
+      <p>Six learning tracks. One focused community.</p>
+    </div>
+
+    <div class="benefit-grid">
+
+      <article class="benefit-card">
+        <span class="card-number">01</span>
+        <div class="benefit-icon">✦</div>
+        <h3>Microsoft Learn</h3>
+        <p>Azure, AI, cloud computing, structured learning paths and certification preparation.</p>
+        <span class="card-footer">LEARN & ACHIEVE</span>
+      </article>
+
+      <article class="benefit-card">
+        <span class="card-number">02</span>
+        <div class="benefit-icon">↗</div>
+        <h3>Internship Preparation</h3>
+        <p>Resume building, interview preparation, application guidance and Microsoft internship preparation.</p>
+        <span class="card-footer">PREPARE & APPLY</span>
+      </article>
+
+      <article class="benefit-card">
+        <span class="card-number">03</span>
+        <div class="benefit-icon">{ }</div>
+        <h3>DSA & Coding</h3>
+        <p>Problem-solving sessions, coding challenges, algorithms and interview-oriented practice.</p>
+        <span class="card-footer">PRACTISE & IMPROVE</span>
+      </article>
+
+      <article class="benefit-card">
+        <span class="card-number">04</span>
+        <div class="benefit-icon">⌘</div>
+        <h3>GSoC & Open Source</h3>
+        <p>Git, GitHub, project exploration and guidance on contributing to open-source projects.</p>
+        <span class="card-footer">CONTRIBUTE & CREATE</span>
+      </article>
+
+      <article class="benefit-card">
+        <span class="card-number">05</span>
+        <div class="benefit-icon">⚡</div>
+        <h3>Hackathons</h3>
+        <p>Discover competitions, collaborate in teams and develop innovative solutions.</p>
+        <span class="card-footer">BUILD & COMPETE</span>
+      </article>
+
+      <article class="benefit-card">
+        <span class="card-number">06</span>
+        <div class="benefit-icon">◎</div>
+        <h3>Networking</h3>
+        <p>Peer learning, technical discussions, project collaboration and community support.</p>
+        <span class="card-footer">CONNECT & GROW</span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- COMMUNITY -->
+
+<section class="section" id="community">
+
+  <div class="container community-grid">
+
+    <div>
+      <span class="section-tag">03 / THE COMMUNITY</span>
+
+      <h2>
+        Not just a group.<br>
+        A place to <span class="gold">grow.</span>
+      </h2>
+
+      <p class="section-description">
+        We believe consistent learning and collaboration
+        create better opportunities. Learn Forge brings
+        motivated students together to develop skills
+        beyond classroom learning.
+      </p>
+
+      <a href="#register" class="btn btn-primary">
+        Join Learn Forge ↗
+      </a>
+    </div>
+
+    <div class="community-points">
+
+      <div><span>✓</span> Structured learning roadmaps</div>
+      <div><span>✓</span> Consistent DSA practice</div>
+      <div><span>✓</span> Project-building opportunities</div>
+      <div><span>✓</span> Open-source contribution guidance</div>
+      <div><span>✓</span> Internship preparation</div>
+      <div><span>✓</span> Technical competitions</div>
+      <div><span>✓</span> Collaborative learning environment</div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ROADMAP -->
+
+<section class="section dark-section" id="roadmap">
+
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="section-tag">04 / YOUR JOURNEY</span>
+      <h2>A roadmap built for <span class="gold">progress.</span></h2>
+      <p>Start with fundamentals and gradually move towards real-world experience.</p>
+    </div>
+
+    <div class="roadmap">
+
+      <article class="roadmap-card">
+        <span class="phase">PHASE 01</span>
+        <h3>Getting Started</h3>
+        <ul>
+          <li>Community onboarding</li>
+          <li>Microsoft Learn setup</li>
+          <li>Technical career exploration</li>
+          <li>Programming fundamentals</li>
+        </ul>
+      </article>
+
+      <article class="roadmap-card">
+        <span class="phase">PHASE 02</span>
+        <h3>Skill Development</h3>
+        <ul>
+          <li>Microsoft Learn modules</li>
+          <li>DSA fundamentals</li>
+          <li>Git and GitHub</li>
+          <li>Regular coding practice</li>
+        </ul>
+      </article>
+
+      <article class="roadmap-card">
+        <span class="phase">PHASE 03</span>
+        <h3>Practical Experience</h3>
+        <ul>
+          <li>Hands-on projects</li>
+          <li>Advanced DSA</li>
+          <li>Open-source contributions</li>
+          <li>Hackathon participation</li>
+        </ul>
+      </article>
+
+      <article class="roadmap-card">
+        <span class="phase">PHASE 04</span>
+        <h3>Career Preparation</h3>
+        <ul>
+          <li>Resume and portfolio</li>
+          <li>Internship applications</li>
+          <li>GSoC preparation</li>
+          <li>Interview preparation</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- REGISTRATION -->
+
+<section class="section registration" id="register">
+
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="section-tag">05 / APPLICATION</span>
+
+      <h2>Your next chapter <span class="gold">starts here.</span></h2>
+
+      <p>
+        Apply for the first Learn Forge batch.
+        Only <span data-bind="capacity">40</span> students can register.
+      </p>
+    </div>
+
+
+    <div class="registration-grid">
+
+      <div class="registration-info">
+
+        <span class="section-tag">BECOME A MEMBER</span>
+
+        <h3>Invest in your skills. Build your future.</h3>
+
+        <p>
+          Join a community of students who want to
+          learn, collaborate, develop projects and
+          explore technology opportunities.
+        </p>
+
+        <div class="info-stat">
+          <strong data-bind="capacity">40</strong>
+          <span>Maximum students in the first batch</span>
+        </div>
+
+        <div class="info-stat">
+          <strong>06</strong>
+          <span>Core learning tracks</span>
+        </div>
+
+        <p class="privacy-note">
+          Your registration details are accessible
+          to the community organizers through the
+          registration spreadsheet.
+        </p>
+
+      </div>
+
+
+      <div class="form-card">
+
+        <div class="form-heading">
+          <h3>Student Registration</h3>
+          <span>FIRST BATCH</span>
+        </div>
+
+        <form id="regForm" novalidate>
+
+          <div class="form-grid">
+
+            <div class="field">
+              <label for="f-name">Full name *</label>
+              <input id="f-name" name="name"
+                type="text" maxlength="100"
+                autocomplete="name" required>
+              <small class="err" id="err-name"></small>
+            </div>
+
+            <div class="field">
+              <label for="f-email">Email *</label>
+              <input id="f-email" name="email"
+                type="email" maxlength="120"
+                placeholder="name@example.com"
+                autocomplete="email" required>
+              <small class="err" id="err-email"></small>
+            </div>
+
+            <div class="field full">
+              <label for="f-college">College name *</label>
+              <input id="f-college" name="college"
+                type="text" maxlength="140" required>
+              <small class="err" id="err-college"></small>
+            </div>
+
+            <div class="field">
+              <label for="f-year">Year of study *</label>
+              <select id="f-year" name="year" required>
+                <option value="">Select year</option>
+                <option>First year</option>
+                <option>Second year</option>
+                <option>Third year</option>
+                <option>Fourth year</option>
+                <option>Postgraduate</option>
+              </select>
+              <small class="err" id="err-year"></small>
+            </div>
+
+            <div class="field">
+              <label for="f-branch">Branch *</label>
+              <input id="f-branch" name="branch"
+                type="text" maxlength="100"
+                placeholder="Computer Science" required>
+              <small class="err" id="err-branch"></small>
+            </div>
+
+            <fieldset class="field full interests">
+              <legend>Choose your interests *</legend>
+
+              <div class="interest-grid">
+
+                <label>
+                  <input type="checkbox" name="interests"
+                    value="Cloud and Azure">
+                  <span>Cloud & Azure</span>
+                </label>
+
+                <label>
+                  <input type="checkbox" name="interests"
+                    value="AI and generative AI">
+                  <span>AI & Generative AI</span>
+                </label>
+
+                <label>
+                  <input type="checkbox" name="interests"
+                    value="Web development">
+                  <span>Web Development</span>
+                </label>
+
+                <label>
+                  <input type="checkbox" name="interests"
+                    value="DSA and competitive programming">
+                  <span>DSA & Coding</span>
+                </label>
+
+                <label>
+                  <input type="checkbox" name="interests"
+                    value="Open source and GSoC">
+                  <span>Open Source & GSoC</span>
+                </label>
+
+                <label>
+                  <input type="checkbox" name="interests"
+                    value="Hackathons">
+                  <span>Hackathons</span>
+                </label>
+
+                <label>
+                  <input type="checkbox" name="interests"
+                    value="Data and analytics">
+                  <span>Data & Analytics</span>
+                </label>
+
+              </div>
+
+              <small class="err" id="err-interests"></small>
+            </fieldset>
+
+          </div>
+
+          <!-- Honeypot: leave empty -->
+          <div class="hp" aria-hidden="true">
+            <label for="f-website">Website</label>
+            <input type="text" id="f-website"
+              name="website" tabindex="-1"
+              autocomplete="off">
+          </div>
+
+          <button class="btn btn-primary submit-btn"
+            id="submitBtn" type="submit">
+            Submit Application ↗
+          </button>
+
+          <div id="formStatus"
+            role="status" aria-live="polite"></div>
+
+          <p class="form-footnote">
+            By submitting, you agree to be contacted
+            by the community organizers regarding onboarding.
+          </p>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FINAL CTA -->
+
+<section class="final-cta">
+  <div class="container">
+    <span class="section-tag">THE FUTURE IS BUILT, NOT WAITED FOR.</span>
+
+    <h2>Don't just learn technology.<br>
+      <span class="gold">Build with it.</span>
+    </h2>
+
+    <a href="#register" class="btn btn-primary">
+      Join Learn Forge ↗
+    </a>
+  </div>
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div>
+      <a href="#home" class="brand">
+        <span class="brand-icon">&lt;/&gt;</span>
+        LEARN<span class="gold">FORGE</span>
+      </a>
+
+      <p>
+        A student-led technology community
+        focused on learning, innovation,
+        collaboration and career development.
+      </p>
+    </div>
+
+    <div>
+      <h4>Explore</h4>
+      <a href="#program">Microsoft Learn</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#register">Registration</a>
+    </div>
+
+    <div>
+      <h4>Resources</h4>
+      <a href="https://learn.microsoft.com/en-us/training/"
+         target="_blank" rel="noopener">Microsoft Learn</a>
+      <a href="https://summerofcode.withgoogle.com/"
+         target="_blank" rel="noopener">Google Summer of Code</a>
+      <a href="https://github.com/"
+         target="_blank" rel="noopener">GitHub</a>
+    </div>
+
+    <div>
+      <h4>Connect</h4>
+      <a data-link="community" href="#register"
+         target="_blank" rel="noopener">Community</a>
+      <a data-link="linkedin" href="#home"
+         target="_blank" rel="noopener">LinkedIn</a>
+      <a data-link="github" href="#home"
+         target="_blank" rel="noopener">GitHub</a>
+      <a id="contactMail" href="#register" hidden>Contact us</a>
+    </div>
+
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© <span id="yearNow"></span> Learn Forge. All rights reserved.</p>
+
+    <p>
+      Independent student-led community.
+      Not affiliated with or endorsed by Microsoft or Google.
+    </p>
+  </div>
+
+</footer>
+
+</body>
+</html>
